@@ -168,7 +168,7 @@ export default function HomePage() {
               Why the <span className="text-sky-blue">Grannies Project</span> Matters
             </h2>
             <p className="text-text-muted leading-relaxed">
-              Thousands of grandmothers across Nairobi's informal settlements are raising
+              Thousands of grandmothers across Nairobi&apos;s informal settlements are raising
               grandchildren alone — with no income, no support, and no voice. We exist to change that.
             </p>
           </RevealWrapper>
