@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           <p className="text-white/55 text-sm leading-relaxed max-w-sm mb-5">
-            Empowering vulnerable grandmothers in Nairobi's Kibra through craft skills,
+            Empowering vulnerable grandmothers in Nairobi&apos;s Kibra through craft skills,
             economic independence, and community bonds. A programme of the Kenya Girl
             Guides Association — aligned to WAGGGS values and the UN Sustainable
             Development Goals.

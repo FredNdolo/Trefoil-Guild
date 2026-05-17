@@ -78,7 +78,7 @@ const GALLERY_PHOTOS = [
 export default function ImpactPage() {
   return (
     <>
-      {/* PAGE HERO */}
+      {/* ── PAGE HERO ─────────────────────────────── */}
       <section className="bg-dark-navy relative overflow-hidden pt-[68px]">
         <div className="absolute inset-0 bg-hero-mesh" />
         <div className="absolute inset-0 bg-section-diagonal" />
@@ -111,31 +111,41 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* STATS */}
-      <StatsCounter stats={IMPACT_STATS} variant="gold" />
+      {/* ── STATS ─────────────────────────────────── */}
+      <StatsCounter stats={IMPACT_STATS} variant="dark" />
 
-      {/* OVERALL PROGRESS */}
+      {/* ── OVERALL PROGRESS ──────────────────────── */}
       <section className="section-pad bg-white">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+
             <RevealWrapper>
               <SectionLabel>Overall Progress</SectionLabel>
               <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-deep-blue leading-tight mt-3 mb-5">
-                Beyond Empowerment —<br />
+                Beyond Empowerment —
+                <br />
                 <span className="text-sky-blue">A Phase of Growth</span>
               </h2>
-              <p className="text-text-muted leading-relaxed mb-6">
+              <p className="text-text-muted leading-relaxed mb-4">
                 The Grannies Project has moved beyond its initial empowerment stage into a
-                phase of growth and improvement.
+                phase of growth and improvement. By combining economic support with social
+                cohesion, the project continues to deliver transformative outcomes year after year.
+              </p>
+              <p className="text-text-muted leading-relaxed mb-6">
+                The 2025–26 Annual Report documents noticeable improvement in financial
+                stability and living standards, with grannies reporting greater confidence,
+                stronger peer networks, and greater visibility in community life.
               </p>
 
               <div className="space-y-3">
-                {IMPACT_QUOTES.map((q) => (
+                {IMPACT_QUOTES.map(q => (
                   <blockquote key={q.source} className="bg-sky-light border-l-4 border-sky-blue rounded-r-xl p-4">
                     <p className="text-deep-blue font-500 text-[14px] leading-relaxed italic">
-                      “{q.quote}”
+                      &ldquo;{q.quote}&rdquo;
                     </p>
-                    <footer className="text-sky-blue text-[11px] font-600 mt-2">— {q.source}</footer>
+                    <footer className="text-sky-blue text-[11px] font-600 mt-2">
+                      — {q.source}
+                    </footer>
                   </blockquote>
                 ))}
               </div>
@@ -151,7 +161,9 @@ export default function ImpactPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/70 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-white font-700 text-[15px] mb-1">Grannies Community Project</p>
+                  <p className="text-white font-700 text-[15px] mb-1">
+                    Grannies Community Project
+                  </p>
                   <p className="text-white/70 text-[12px]">Kibra, Nairobi · Est. 1998</p>
                 </div>
               </div>
@@ -160,9 +172,95 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* KEY ACHIEVEMENTS & DEEPER IMPACT sections remain the same as before */}
+      {/* ── KEY ACHIEVEMENTS ──────────────────────── */}
+      <section className="section-pad bg-sky-light relative overflow-hidden pattern-diagonal">
+        <div className="container-wide relative z-10">
+          <RevealWrapper className="text-center max-w-xl mx-auto mb-12">
+            <SectionLabel>Key Achievements</SectionLabel>
+            <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-deep-blue mt-3 mb-4 leading-tight">
+              What We Have Achieved
+            </h2>
+            <p className="text-text-muted leading-relaxed">
+              Through persistent effort and the trust of our community, the Grannies
+              Project has produced measurable and lasting change.
+            </p>
+          </RevealWrapper>
 
-      {/* PHOTO GALLERY - IMPROVED */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {ACHIEVEMENTS.map((item, i) => (
+              <RevealWrapper key={item.title} delay={i * 80}>
+                <div className="bg-white rounded-xl p-6 border border-sky-blue/10 hover:border-gold/30 hover:shadow-card-hover transition-all duration-300 group h-full">
+                  <div className="w-12 h-12 rounded-xl bg-deep-blue group-hover:bg-sky-blue flex items-center justify-center text-2xl mb-4 transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <div className="flex items-start gap-2 mb-3">
+                    <div className="w-5 h-5 rounded-full bg-gold flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-deep-blue text-[10px] font-800">✓</span>
+                    </div>
+                    <h3 className="font-700 text-[16px] text-deep-blue group-hover:text-sky-blue transition-colors">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="text-text-muted text-[13.5px] leading-relaxed pl-7">{item.body}</p>
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DEEPER IMPACT ─────────────────────────── */}
+      <section className="section-pad bg-deep-blue relative overflow-hidden">
+        <div className="absolute inset-0 bg-section-diagonal" />
+        <div className="container-wide relative z-10">
+
+          <RevealWrapper className="text-center max-w-xl mx-auto mb-12">
+            <SectionLabel variant="sky">Deeper Impact</SectionLabel>
+            <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-white mt-3 mb-4 leading-tight">
+              Transforming Lives,
+              <br />
+              <span className="text-gold">Beyond the Craft</span>
+            </h2>
+          </RevealWrapper>
+
+          <div className="grid md:grid-cols-2 gap-5">
+            {[
+              {
+                icon: '📈',
+                title: 'Financial Stability',
+                body: 'Noticeable improvement in financial stability and living standards compared to last year, with grannies reporting higher average earnings and better household budgeting.',
+              },
+              {
+                icon: '💪',
+                title: 'Confidence & Leadership',
+                body: 'Increased confidence and self-esteem — more grannies are taking on leadership roles within their groups, mentoring newer participants and speaking at community events.',
+              },
+              {
+                icon: '🌐',
+                title: 'Social Networks',
+                body: "Stronger social networks are evolving into support groups that extend beyond craft production — providing emotional support, shared childcare knowledge, and community solidarity.",
+              },
+              {
+                icon: '🎤',
+                title: 'Community Visibility',
+                body: "Greater visibility of grannies' work in community events and exhibitions — shifting the narrative from vulnerability to contribution and dignity.",
+              },
+            ].map((item, i) => (
+              <RevealWrapper key={item.title} delay={i * 80}>
+                <div className="bg-white/[0.06] border border-sky-blue/15 rounded-xl p-6 hover:bg-white/[0.1] transition-all duration-200 group">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <h3 className="font-700 text-[17px] text-white mb-2 group-hover:text-gold transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-white/55 text-[14px] leading-relaxed">{item.body}</p>
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PHOTO GALLERY ─────────────────────────── */}
       <section className="section-pad bg-white" id="gallery">
         <div className="container-wide">
           <RevealWrapper className="mb-10">
@@ -191,11 +289,10 @@ export default function ImpactPage() {
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   />
 
-                  {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                    <p className="text-white font-600 text-sm leading-tight">{photo.caption}</p>
+                  <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                    <p className="text-white font-600 text-[12px]">{photo.caption}</p>
                   </div>
                 </div>
               </RevealWrapper>
@@ -204,7 +301,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ── CTA ───────────────────────────────────── */}
       <section className="bg-sky-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal opacity-50" />
         <div className="container-tight relative z-10 py-16 text-center px-5">

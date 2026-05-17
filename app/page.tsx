@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 const HOME_STATS = [
   { value: 1998, label: 'Year Founded' },
-  { value: 25, label: 'Years of Service', suffix: '+' },
-  { value: 6, label: 'Key Achievements', suffix: '+' },
-  { value: 6, label: 'Core Activities' },
+  { value: 25,   label: 'Years of Service', suffix: '+' },
+  { value: 6,    label: 'Key Achievements', suffix: '+' },
+  { value: 6,    label: 'Core Activities' },
 ]
 
 const CHALLENGE_CARDS = [
@@ -116,28 +116,27 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Logo badge */}
+          {/* Logo badge with orbiting mini-logo */}
           <div className="hidden lg:flex flex-col items-center gap-6 animate-fade-in">
             <div className="relative">
               {/* Main logo */}
               <div className="w-[220px] h-[220px] rounded-full overflow-hidden ring-4 ring-gold/30 shadow-[0_0_80px_rgba(245,166,35,0.2)]">
                 <Image
-                  src="/logo.jpeg"           // ← Make sure this file exists in public/logo.jpeg
+                  src="/logo.jpeg"
                   alt="Trefoil Guild Kenya"
-                  width={250}
-                  height={250}
+                  width={220}
+                  height={220}
                   className="object-cover w-full h-full"
                   priority
                 />
               </div>
-
               {/* Orbiting mini-logo */}
               <div className="absolute -top-2 -right-2 w-14 h-14 rounded-full overflow-hidden ring-2 ring-gold shadow-[0_0_16px_rgba(245,166,35,0.55)]">
                 <Image
                   src="/blank.jpg"
                   alt="Trefoil Guild Kenya badge"
-                  width={40}
-                  height={40}
+                  width={56}
+                  height={56}
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -147,6 +146,7 @@ export default function HomePage() {
               <p className="text-white/40 text-[11px] tracking-widest uppercase font-500">Association · WAGGGS</p>
             </div>
           </div>
+
         </div>
 
         {/* Scroll indicator */}
@@ -159,7 +159,96 @@ export default function HomePage() {
       {/* STATS */}
       <StatsCounter stats={HOME_STATS} variant="sky" />
 
-      {/* ... rest of your page remains the same ... */}
+      {/* WHY IT MATTERS */}
+      <section className="section-pad bg-sky-light relative overflow-hidden pattern-diagonal">
+        <div className="container-wide relative z-10">
+          <RevealWrapper className="text-center max-w-xl mx-auto mb-14">
+            <SectionLabel>The Challenge</SectionLabel>
+            <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-deep-blue mt-3 mb-4 leading-tight">
+              Why the <span className="text-sky-blue">Grannies Project</span> Matters
+            </h2>
+            <p className="text-text-muted leading-relaxed">
+              Thousands of grandmothers across Nairobi's informal settlements are raising
+              grandchildren alone — with no income, no support, and no voice. We exist to change that.
+            </p>
+          </RevealWrapper>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {CHALLENGE_CARDS.map((card, i) => (
+              <RevealWrapper key={card.title} delay={i * 100}>
+                <div className="bg-white rounded-xl p-7 border border-border-soft shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 group">
+                  <div className="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-2xl mb-5 group-hover:bg-sky-blue transition-colors duration-300">
+                    {card.icon}
+                  </div>
+                  <h3 className="font-700 text-[17px] text-deep-blue mb-3">{card.title}</h3>
+                  <p className="text-text-muted text-[14px] leading-relaxed">{card.body}</p>
+                  <div className="mt-5 h-[2px] w-0 bg-gold rounded-full group-hover:w-full transition-all duration-[400ms]" />
+                </div>
+              </RevealWrapper>
+            ))}
+          </div>
+
+          <RevealWrapper className="text-center mt-10">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 text-sky-blue hover:text-deep-blue font-600 text-[13px] border border-sky-blue/30 hover:border-deep-blue/30 px-6 py-3 rounded-md transition-colors"
+            >
+              Learn about who we are
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </Link>
+          </RevealWrapper>
+        </div>
+      </section>
+
+      {/* ACTIVITIES TEASER */}
+      <section className="section-pad bg-deep-blue relative overflow-hidden">
+        <div className="absolute inset-0 bg-section-diagonal" />
+        <div className="container-wide relative z-10">
+          <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
+
+            <RevealWrapper>
+              <SectionLabel variant="sky">What We Do</SectionLabel>
+              <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-white mt-3 mb-5 leading-tight">
+                Our Core <br /><span className="text-gold">Activities</span>
+              </h2>
+              <p className="text-white/55 text-[15px] leading-relaxed mb-6">
+                Six interconnected programmes that address the economic, social, and
+                skills needs of our grannies — from craft training to financial education.
+              </p>
+              <Link
+                href="/programme"
+                className="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-600 text-[13px] transition-colors"
+              >
+                View Full Programme
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                </svg>
+              </Link>
+            </RevealWrapper>
+
+            <div className="grid gap-4">
+              {ACTIVITY_PREVIEWS.map((act, i) => (
+                <RevealWrapper key={act.num} delay={i * 100}>
+                  <Link
+                    href={act.href}
+                    className="flex gap-5 items-start bg-white/[0.05] hover:bg-white/[0.09] border border-sky-blue/10 hover:border-sky-blue/25 rounded-xl p-6 transition-all duration-200 group"
+                  >
+                    <span className="font-800 text-[34px] leading-none text-gold/25 group-hover:text-gold/50 transition-colors w-10 flex-shrink-0">
+                      {act.num}
+                    </span>
+                    <div>
+                      <h3 className="font-700 text-[16px] text-white mb-1.5">{act.title}</h3>
+                      <p className="text-white/50 text-[13.5px] leading-relaxed">{act.body}</p>
+                    </div>
+                  </Link>
+                </RevealWrapper>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* IMPACT SNAPSHOT */}
       <section className="section-pad bg-white">
@@ -207,15 +296,19 @@ export default function HomePage() {
                   alt="Grannies project group"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
+                <div className="absolute top-5 right-5 bg-gold rounded-xl p-4 text-center shadow-gold-glow">
+                  <div className="font-800 text-[32px] text-deep-blue leading-none">6+</div>
+                  <div className="text-deep-blue/70 text-[10px] font-700 tracking-wider uppercase mt-1">Key Achievements</div>
+                </div>
               </div>
             </RevealWrapper>
+
           </div>
         </div>
       </section>
 
-      {/* CTA BANNER - unchanged */}
+      {/* CTA BANNER */}
       <section className="relative overflow-hidden bg-sky-blue">
         <div className="absolute inset-0 bg-section-diagonal opacity-50" />
         <div className="container-tight relative z-10 py-16 md:py-20 px-5 text-center">

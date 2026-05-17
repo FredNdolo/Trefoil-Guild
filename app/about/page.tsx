@@ -150,7 +150,7 @@ export default function AboutPage() {
                 The Guild works actively to support intergenerational mentorship, community
                 development, and national initiatives aligned to WAGGGS values and the
                 Sustainable Development Goals. The <strong className="text-deep-blue font-600">Grannies Community Project</strong> is
-                one of the Guild's flagship community programmes.
+                one of the Guild&apos;s flagship community programmes.
               </p>
 
               <div className="inline-flex items-center gap-3 bg-sky-light border border-sky-blue/20 rounded-xl px-5 py-3">

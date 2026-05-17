@@ -24,7 +24,7 @@ const ACTIVITIES = [
       'Quality control reviews before market submission',
       'Introduction of new techniques each season',
     ],
-    image: '/training.jpg',                    // Fixed
+    image: '/training.jpg',
     imageAlt: 'Grannies craft training session',
   },
   {
@@ -40,7 +40,7 @@ const ACTIVITIES = [
       'Stock management to prevent production gaps',
       'Subsidised access for lowest-income participants',
     ],
-    image: '/grannies-craft.jpg',              // Fixed
+    image: '/grannies-craft.jpg',
     imageAlt: 'Craft materials and supplies',
   },
   {
@@ -56,7 +56,7 @@ const ACTIVITIES = [
       'Guild member distribution network',
       'Online platforms for wider reach',
     ],
-    image: '/market.jpg',                      // Fixed
+    image: '/market.jpg',
     imageAlt: 'Grannies products at market',
   },
   {
@@ -72,7 +72,7 @@ const ACTIVITIES = [
       'Savings culture and goal-setting',
       'Budgeting for household and business needs',
     ],
-    image: '/grannies-group.jpg',              // Fixed
+    image: '/grannies-group.jpg',
     imageAlt: 'Financial education session',
   },
   {
@@ -88,7 +88,7 @@ const ACTIVITIES = [
       'Democratically managed by the group',
       'Builds credit history and financial confidence',
     ],
-    image: '/table-banking.jpg',               // Fixed
+    image: '/table-banking.jpg',
     imageAlt: 'Table banking session',
     isNew: true,
   },
@@ -105,7 +105,7 @@ const ACTIVITIES = [
       'Peer mentoring between experienced and new participants',
       'Collective production sessions fostering social bonds',
     ],
-    image: '/christmas-baskets.jpg',           // Fixed
+    image: '/christmas-baskets.jpg',
     imageAlt: 'Christmas gift basket distribution',
   },
 ]
@@ -182,9 +182,9 @@ export default function ProgrammePage() {
               </h2>
               <div className="bg-sky-light border-l-4 border-sky-blue rounded-r-xl p-5 mb-5">
                 <p className="text-deep-blue font-500 text-[15px] leading-relaxed italic">
-                  "To enhance the economic and social well-being of widowed grannies by
+                  &ldquo;To enhance the economic and social well-being of widowed grannies by
                   equipping them with skills, resources and support to generate sustainable
-                  income through handcraft production."
+                  income through handcraft production.&rdquo;
                 </p>
                 <p className="text-sky-blue text-[12px] font-600 mt-3">
                   — Grannies Project Annual Report, 2025–2026
