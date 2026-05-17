@@ -2,26 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── CSS Custom Properties ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand palette — Trefoil Guild Kenya */
+  --deep-blue:    #1B3380;
+  --sky-blue:     #29ABE2;
+  --sky-light:    #EBF5FC;
+  --gold:         #F5A623;
+  --gold-dark:    #D4891A;
+  --gold-pale:    #FEF3DC;
+  --dark-navy:    #0D1B4B;
+  --mid-blue:     #2650C0;
+  --text-dark:    #0D1B4B;
+  --text-muted:   #4E6080;
+  --border-soft:  rgba(27, 51, 128, 0.12);
+  --border-gold:  rgba(245, 166, 35, 0.3);
+
+  /* Shadows */
+  --shadow-card:       0 4px 24px rgba(13, 27, 75, 0.08);
+  --shadow-card-hover: 0 12px 40px rgba(13, 27, 75, 0.14);
+  --shadow-gold-glow:  0 0 32px rgba(245, 166, 35, 0.25);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Section diagonal pattern overlay ── */
+.pattern-diagonal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(41, 171, 226, 0.025) 0px, rgba(41, 171, 226, 0.025) 1px,
+    transparent 1px, transparent 32px
+  );
+  pointer-events: none;
+}
+
+/* ── Gold underline accent ── */
+.gold-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.gold-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* ── Nav active link ── */
+.nav-link-active {
+  color: var(--gold) !important;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--sky-light); }
+::-webkit-scrollbar-thumb { background: var(--sky-blue); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--deep-blue); }
+
+/* ── Focus ring ── */
+*:focus-visible {
+  outline: 2px solid var(--sky-blue);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(41, 171, 226, 0.25);
+  color: var(--deep-blue);
+}
+
+/* ── Utility: Section padding ── */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .section-pad {
+    @apply py-16 md:py-24 px-5 md:px-[5vw];
+  }
+  .container-tight {
+    @apply max-w-5xl mx-auto;
+  }
+  .container-wide {
+    @apply max-w-6xl mx-auto;
   }
 }
