@@ -307,7 +307,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── SDG ALIGNMENT - Now matching Hero style ─────────────────────────── */}
-      <section className="section-pad bg-deep-blue relative overflow-hidden">
+      <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
           <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-center">
@@ -317,7 +317,7 @@ export default function AboutPage() {
               <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-dark-navy mt-3 mb-5 leading-tight">
                 United Nations
                 <br />
-                <span className="text-white">Sustainable Development Goals</span>
+                <span className="text-deep-blue">Sustainable Development Goals</span>
               </h2>
               <p className="text-dark-navy/70 text-[15px] leading-relaxed mb-6">
                 The Grannies Project contributes directly to six of the seventeen
@@ -392,7 +392,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ───────────────────────────────────── */}
-      <section className="section-pad bg-sky-blue relative overflow-hidden">
+      <section className="section-pad bg-deep-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal opacity-50" />
         <div className="container-tight relative z-10 text-center">
           <RevealWrapper>

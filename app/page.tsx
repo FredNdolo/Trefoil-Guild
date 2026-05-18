@@ -201,17 +201,17 @@ export default function HomePage() {
       </section>
 
       {/* ACTIVITIES TEASER - Updated to darker cyan blue */}
-      <section className="section-pad bg-deep-blue relative overflow-hidden">
+      <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
 
             <RevealWrapper>
               <SectionLabel variant="sky">What We Do</SectionLabel>
-              <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-white mt-3 mb-5 leading-tight">
+              <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-deep-blue mt-3 mb-5 leading-tight">
                 Our Core <br /><span className="text-gold">Activities</span>
               </h2>
-              <p className="text-white/55 text-[15px] leading-relaxed mb-6">
+              <p className="text-black/55 text-[15px] leading-relaxed mb-6">
                 Six interconnected programmes that address the economic, social, and
                 skills needs of our grannies — from craft training to financial education.
               </p>

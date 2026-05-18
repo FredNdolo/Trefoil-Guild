@@ -284,7 +284,7 @@ export default function ProgrammePage() {
       </section>
 
       {/* ── NEW TECHNIQUES 2025–26 ────────────────── */}
-      <section className="section-pad bg-deep-blue relative overflow-hidden">
+      <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
 
@@ -310,8 +310,8 @@ export default function ProgrammePage() {
               <RevealWrapper key={t.title} delay={i * 80}>
                 <div className="bg-white/[0.08] border border-sky-blue/20 rounded-xl p-6 hover:bg-white/[0.12] hover:border-gold/30 transition-all duration-200 group">
                   <div className="text-3xl mb-4">{t.icon}</div>
-                  <h3 className="font-700 text-[15px] text-white mb-2 group-hover:text-gold transition-colors">{t.title}</h3>
-                  <p className="text-white/70 text-[13px] leading-relaxed font-medium">{t.body}</p>
+                  <h3 className="font-700 text-[15px] text-gold mb-2 group-hover:text-gold transition-colors">{t.title}</h3>
+                  <p className="text-dark-navy/70 text-[13px] leading-relaxed font-medium">{t.body}</p>
                   <div className="mt-4 inline-flex items-center gap-1.5 bg-gold/15 rounded-full px-3 py-1">
                     <span className="text-gold text-[10px] font-700">★ NEW</span>
                   </div>

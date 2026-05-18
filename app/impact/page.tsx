@@ -210,13 +210,13 @@ export default function ImpactPage() {
       </section>
 
       {/* ── DEEPER IMPACT ─────────────────────────── */}
-      <section className="section-pad bg-deep-blue relative overflow-hidden">
+      <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
 
           <RevealWrapper className="text-center max-w-xl mx-auto mb-12">
             <SectionLabel variant="sky">Deeper Impact</SectionLabel>
-            <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-white mt-3 mb-4 leading-tight">
+            <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-gold mt-3 mb-4 leading-tight">
               Transforming Lives,
               <br />
               <span className="text-dark-navy">Beyond the Craft</span>
@@ -249,10 +249,10 @@ export default function ImpactPage() {
               <RevealWrapper key={item.title} delay={i * 80}>
                 <div className="bg-white/[0.06] border border-sky-blue/15 rounded-xl p-6 hover:bg-white/[0.1] transition-all duration-200 group">
                   <div className="text-3xl mb-4">{item.icon}</div>
-                  <h3 className="font-700 text-[17px] text-white mb-2 group-hover:text-gold transition-colors">
+                  <h3 className="font-700 text-[17px] text-black mb-2 group-hover:text-gold transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-white/55 text-[14px] leading-relaxed">{item.body}</p>
+                  <p className="text-deep-blue/85 text-[14px] leading-relaxed">{item.body}</p>
                 </div>
               </RevealWrapper>
             ))}
