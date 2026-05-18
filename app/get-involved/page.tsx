@@ -95,7 +95,7 @@ export default function GetInvolvedPage() {
   return (
     <>
       {/* ── PAGE HERO ─────────────────────────────── */}
-      <section className="bg-dark-navy relative overflow-hidden pt-[68px]">
+      <section className="bg-deep-blue relative overflow-hidden pt-[68px]">
         <div className="absolute inset-0 bg-hero-mesh" />
         <div className="absolute inset-0 bg-section-diagonal" />
 
@@ -103,14 +103,14 @@ export default function GetInvolvedPage() {
           <div className="max-w-2xl animate-fade-up">
             <div className="inline-flex items-center gap-2.5 bg-gold/15 border border-gold/30 rounded-full px-4 py-1.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-dot" />
-              <span className="text-gold/90 text-[11px] font-600 tracking-[2px] uppercase">
+              <span className="text-black/90 text-[11px] font-600 tracking-[2px] uppercase">
                 Join Us
               </span>
             </div>
             <h1 className="font-800 text-[clamp(40px,6vw,72px)] text-white leading-tight mb-5 tracking-tight">
               Get <span className="text-gold">Involved</span>
             </h1>
-            <p className="text-white/60 text-[17px] font-300 leading-relaxed max-w-xl">
+            <p className="text-black/60 text-[20px] font-400 leading-relaxed max-w-xl">
               There are many ways to walk alongside the grandmothers of Kibra.
               Pick the one that fits your capacity and passion — every contribution matters.
             </p>
@@ -127,12 +127,12 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* ── IMPACT NUMBERS STRIP ──────────────────── */}
-      <div className="bg-gold">
+      <div className="bg-dark-navy">
         <div className="max-w-5xl mx-auto px-5 py-8 grid sm:grid-cols-3 gap-5">
           {IMPACT_NUMBERS.map((n, i) => (
             <div key={i} className="text-center">
               <div className="font-800 text-[36px] text-deep-blue leading-none mb-1">{n.val}</div>
-              <div className="text-deep-blue/65 text-[11px] font-600 leading-snug tracking-wide whitespace-pre-line">
+              <div className="text-white/65 text-[11px] font-600 leading-snug tracking-wide whitespace-pre-line">
                 {n.label}
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function GetInvolvedPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-deep-blue font-700 text-[14px] px-9 py-4 rounded-md transition-colors shadow-gold-glow"
+                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-black font-700 text-[14px] px-9 py-4 rounded-md transition-colors shadow-gold-glow"
               >
                 Contact Us Today
               </Link>

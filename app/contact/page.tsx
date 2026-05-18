@@ -74,7 +74,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ── PAGE HERO ─────────────────────────────── */}
-      <section className="bg-dark-navy relative overflow-hidden pt-[68px]">
+      <section className="bg-deep-blue relative overflow-hidden pt-[68px]">
         <div className="absolute inset-0 bg-hero-mesh" />
         <div className="absolute inset-0 bg-section-diagonal" />
 
@@ -87,9 +87,9 @@ export default function ContactPage() {
               </span>
             </div>
             <h1 className="font-800 text-[clamp(40px,6vw,72px)] text-white leading-tight mb-5 tracking-tight">
-              Get in <span className="text-sky-blue">Touch</span>
+              Get in <span className="text-gold">Touch</span>
             </h1>
-            <p className="text-white/60 text-[17px] font-300 leading-relaxed max-w-lg">
+            <p className="text-white/80 text-[17px] font-300 leading-relaxed max-w-lg">
               Whether you are a donor, volunteer, partner, or simply someone who cares
               about the grandmothers of Kibra — we would love to hear from you.
             </p>

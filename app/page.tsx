@@ -61,7 +61,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="min-h-screen bg-dark-navy relative overflow-hidden flex items-center pt-[68px]">
+      <section className="min-h-screen bg-deep-blue relative overflow-hidden flex items-center pt-[68px]">
         <div className="absolute inset-0 bg-hero-mesh" />
         <div className="absolute inset-0 bg-section-diagonal opacity-100" />
         <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-sky-blue/10 opacity-50" />
@@ -71,17 +71,17 @@ export default function HomePage() {
 
           {/* Text */}
           <div className="animate-fade-up max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 bg-sky-blue/10 border border-sky-blue/25 rounded-full px-4 py-1.5 mb-8">
+            <div className="inline-flex items-center gap-2.5 bg-dark-navy/10 border border-dark-navy/20 rounded-full px-4 py-1.5 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-blue animate-pulse-dot" />
-              <span className="text-sky-blue/90 text-[11px] font-600 tracking-[2px] uppercase">
+              <span className="text-dark-navy/80 text-[11px] font-600 tracking-[2px] uppercase">
                 Trefoil Guild Kenya · Est. 1998
               </span>
             </div>
 
-            <h1 className="font-800 text-[clamp(48px,7vw,82px)] leading-[1.0] text-white mb-6 tracking-tight">
+            <h1 className="font-800 text-[clamp(48px,7vw,82px)] leading-[1.0] text-dark-navy mb-6 tracking-tight">
               Inspiring
               <br />
-              <span className="text-sky-blue">Generations,</span>
+              <span className="text-gold">Generations,</span>
               <br />
               Building{' '}
               <span className="relative inline-block">
@@ -92,7 +92,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-white/60 text-[17px] font-300 leading-relaxed max-w-lg mb-10">
+            <p className="text-dark-navy/70 text-[17px] font-300 leading-relaxed max-w-lg mb-10">
               Empowering vulnerable grandmothers in Kibra, Nairobi — through craft
               skills, economic independence, and the unbreakable bonds of community.
             </p>
@@ -100,7 +100,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-deep-blue font-700 text-[14px] px-8 py-4 rounded-md transition-all duration-200 hover:-translate-y-px shadow-gold-glow"
+                className="inline-flex items-center gap-2 bg-dark-navy hover:bg-gold-dark text-white font-700 text-[14px] px-8 py-4 rounded-md transition-all duration-200 hover:-translate-y-px shadow-gold-glow"
               >
                 Make a Difference
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -109,7 +109,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 bg-transparent text-white/80 hover:text-white border border-white/20 hover:border-sky-blue/60 font-500 text-[14px] px-8 py-4 rounded-md transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-transparent text-dark-navy/80 hover:text-gold border border-dark-navy/25 hover:border-deep-blue/60 font-500 text-[14px] px-8 py-4 rounded-md transition-all duration-200"
               >
                 Learn More
               </Link>
@@ -119,7 +119,6 @@ export default function HomePage() {
           {/* Logo badge with orbiting mini-logo */}
           <div className="hidden lg:flex flex-col items-center gap-6 animate-fade-in">
             <div className="relative">
-              {/* Main logo */}
               <div className="w-[220px] h-[220px] rounded-full overflow-hidden ring-4 ring-gold/30 shadow-[0_0_80px_rgba(245,166,35,0.2)]">
                 <Image
                   src="/logo.jpeg"
@@ -130,7 +129,6 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              {/* Orbiting mini-logo */}
               <div className="absolute -top-2 -right-2 w-14 h-14 rounded-full overflow-hidden ring-2 ring-gold shadow-[0_0_16px_rgba(245,166,35,0.55)]">
                 <Image
                   src="/blank.jpg"
@@ -142,16 +140,16 @@ export default function HomePage() {
               </div>
             </div>
             <div className="text-center">
-              <p className="text-white/40 text-[11px] tracking-widest uppercase font-500">Kenya Girl Guides</p>
-              <p className="text-white/40 text-[11px] tracking-widest uppercase font-500">Association · WAGGGS</p>
+              <p className="text-dark-navy/40 text-[11px] tracking-widest uppercase font-500">Kenya Girl Guides</p>
+              <p className="text-dark-navy/40 text-[11px] tracking-widest uppercase font-500">Association · WAGGGS</p>
             </div>
           </div>
 
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
-          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent animate-scroll-line" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark-navy/30">
+          <div className="w-px h-10 bg-gradient-to-b from-dark-navy/30 to-transparent animate-scroll-line" />
           <span className="text-[10px] tracking-[2px] uppercase font-500">Scroll</span>
         </div>
       </section>
@@ -177,10 +175,10 @@ export default function HomePage() {
             {CHALLENGE_CARDS.map((card, i) => (
               <RevealWrapper key={card.title} delay={i * 100}>
                 <div className="bg-white rounded-xl p-7 border border-border-soft shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 group">
-                  <div className="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-2xl mb-5 group-hover:bg-sky-blue transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-xl bg-dark-navy flex items-center justify-center text-2xl mb-5 group-hover:bg-sky-blue transition-colors duration-300">
                     {card.icon}
                   </div>
-                  <h3 className="font-700 text-[17px] text-deep-blue mb-3">{card.title}</h3>
+                  <h3 className="font-700 text-[17px] text-dark-navy mb-3">{card.title}</h3>
                   <p className="text-text-muted text-[14px] leading-relaxed">{card.body}</p>
                   <div className="mt-5 h-[2px] w-0 bg-gold rounded-full group-hover:w-full transition-all duration-[400ms]" />
                 </div>
@@ -202,7 +200,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ACTIVITIES TEASER */}
+      {/* ACTIVITIES TEASER - Updated to darker cyan blue */}
       <section className="section-pad bg-deep-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
@@ -233,14 +231,14 @@ export default function HomePage() {
                 <RevealWrapper key={act.num} delay={i * 100}>
                   <Link
                     href={act.href}
-                    className="flex gap-5 items-start bg-white/[0.05] hover:bg-white/[0.09] border border-sky-blue/10 hover:border-sky-blue/25 rounded-xl p-6 transition-all duration-200 group"
+                    className="flex gap-5 items-start bg-white/[0.06] hover:bg-white/[0.10] border border-sky-blue/10 hover:border-sky-blue/30 rounded-xl p-6 transition-all duration-200 group"
                   >
-                    <span className="font-800 text-[34px] leading-none text-gold/25 group-hover:text-gold/50 transition-colors w-10 flex-shrink-0">
+                    <span className="font-800 text-[34px] leading-none text-gold/70 group-hover:text-gold/50 transition-colors w-10 flex-shrink-0">
                       {act.num}
                     </span>
                     <div>
                       <h3 className="font-700 text-[16px] text-white mb-1.5">{act.title}</h3>
-                      <p className="text-white/50 text-[13.5px] leading-relaxed">{act.body}</p>
+                      <p className="text-dark-navy/70 text-[15px] leading-relaxed">{act.body}</p>
                     </div>
                   </Link>
                 </RevealWrapper>
@@ -257,13 +255,13 @@ export default function HomePage() {
 
             <RevealWrapper>
               <SectionLabel>Our Impact</SectionLabel>
-              <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-deep-blue mt-3 mb-5 leading-tight">
+              <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-dark-navy mt-3 mb-5 leading-tight">
                 Measurable Change,<br /><span className="text-sky-blue">Real Lives</span>
               </h2>
               <p className="text-text-muted leading-relaxed mb-5">
                 The Annual Report (2025–2026) shows the Grannies Project has moved beyond
                 its initial empowerment stage into a phase of{' '}
-                <strong className="text-deep-blue">growth and improvement</strong> — combining
+                <strong className="text-dark-navy">growth and improvement</strong> — combining
                 economic support with social cohesion to deliver transformative outcomes.
               </p>
               <ul className="space-y-3 mb-7">
@@ -298,8 +296,8 @@ export default function HomePage() {
                   className="object-cover"
                 />
                 <div className="absolute top-5 right-5 bg-gold rounded-xl p-4 text-center shadow-gold-glow">
-                  <div className="font-800 text-[32px] text-deep-blue leading-none">6+</div>
-                  <div className="text-deep-blue/70 text-[10px] font-700 tracking-wider uppercase mt-1">Key Achievements</div>
+                  <div className="font-800 text-[32px] text-dark-navy leading-none">6+</div>
+                  <div className="text-dark-navy/70 text-[10px] font-700 tracking-wider uppercase mt-1">Key Achievements</div>
                 </div>
               </div>
             </RevealWrapper>
@@ -309,30 +307,30 @@ export default function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="relative overflow-hidden bg-sky-blue">
+      <section className="relative overflow-hidden bg-deep-blue">
         <div className="absolute inset-0 bg-section-diagonal opacity-50" />
         <div className="container-tight relative z-10 py-16 md:py-20 px-5 text-center">
           <RevealWrapper>
-            <p className="text-deep-blue/70 text-[11px] font-700 tracking-[2.5px] uppercase mb-4">
+            <p className="text-dark-navy/70 text-[11px] font-700 tracking-[2.5px] uppercase mb-4">
               Join Us in Making a Difference
             </p>
-            <h2 className="font-800 text-[clamp(28px,4vw,46px)] text-deep-blue leading-tight mb-5">
+            <h2 className="font-800 text-[clamp(28px,4vw,46px)] text-dark-navy leading-tight mb-5">
               Every Contribution<br />Changes a Life
             </h2>
-            <p className="text-deep-blue/70 text-[16px] leading-relaxed max-w-lg mx-auto mb-8">
+            <p className="text-dark-navy/70 text-[16px] leading-relaxed max-w-lg mx-auto mb-8">
               Donate, volunteer, partner, or sponsor. There are many ways to walk
               alongside the grandmothers of Kibra.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center gap-2 bg-deep-blue hover:bg-dark-navy text-white font-700 text-[14px] px-9 py-4 rounded-md transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 bg-dark-navy hover:bg-dark-navy/80 text-white font-700 text-[14px] px-9 py-4 rounded-md transition-colors shadow-lg"
               >
                 Get Involved
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-deep-blue font-600 text-[14px] px-9 py-4 rounded-md border border-deep-blue/20 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-dark-navy font-600 text-[14px] px-9 py-4 rounded-md border border-dark-navy/20 transition-colors"
               >
                 Contact Us
               </Link>

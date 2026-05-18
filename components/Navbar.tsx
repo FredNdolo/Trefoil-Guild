@@ -16,8 +16,8 @@ const NAV_LINKS = [
 ]
 
 export default function Navbar() {
-  const [scrolled,   setScrolled]   = useState(false)
-  const [menuOpen,   setMenuOpen]   = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -26,10 +26,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close mobile menu on route change
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
-  // Lock body scroll when mobile menu open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
@@ -41,8 +39,8 @@ export default function Navbar() {
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'bg-deep-blue/98 backdrop-blur-md shadow-[0_2px_20px_rgba(13,27,75,0.35)]'
-            : 'bg-deep-blue'
+            ? 'bg-dark-navy/98 backdrop-blur-md shadow-[0_2px_20px_rgba(13,27,75,0.35)]'
+            : 'bg-dark-navy'
         )}
       >
         <div className="max-w-6xl mx-auto px-5 lg:px-8 h-[68px] flex items-center justify-between">
@@ -63,7 +61,7 @@ export default function Navbar() {
               <div className="text-white font-bold text-[15px] tracking-tight leading-none">
                 Grannies Project
               </div>
-              <div className="text-sky-blue/80 text-[10.5px] font-medium tracking-wider uppercase">
+              <div className="text-deep-blue text-[10.5px] font-medium tracking-wider uppercase">
                 Trefoil Guild Kenya
               </div>
             </div>
@@ -97,7 +95,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="/get-involved"
-            className="hidden lg:inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-deep-blue font-700 text-[13px] px-5 py-2.5 rounded-md transition-all duration-200 hover:-translate-y-px active:translate-y-0 shadow-sm hover:shadow-gold-glow"
+            className="hidden lg:inline-flex items-center gap-2 bg-dark-navy hover:bg-gold-dark text-white font-700 text-[13px] px-5 py-2.5 rounded-md transition-all duration-200 hover:-translate-y-px active:translate-y-0 shadow-sm hover:shadow-gold-glow"
           >
             Support Us
           </Link>
@@ -136,7 +134,7 @@ export default function Navbar() {
         {/* Menu panel */}
         <div
           className={clsx(
-            'relative bg-deep-blue border-t border-sky-blue/20 transition-transform duration-300',
+            'relative bg-dark-navy border-t border-deep-blue/30 transition-transform duration-300',
             menuOpen ? 'translate-y-0' : '-translate-y-4'
           )}
         >
@@ -162,7 +160,7 @@ export default function Navbar() {
           <div className="p-4 border-t border-white/10">
             <Link
               href="/get-involved"
-              className="flex items-center justify-center gap-2 bg-gold text-deep-blue font-700 text-[14px] px-6 py-3 rounded-md w-full transition-colors hover:bg-gold-dark"
+              className="flex items-center justify-center gap-2 bg-gold text-dark-navy font-700 text-[14px] px-6 py-3 rounded-md w-full transition-colors hover:bg-gold-dark"
             >
               Support the Grannies Project
             </Link>

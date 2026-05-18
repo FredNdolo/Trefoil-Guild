@@ -79,23 +79,23 @@ export default function ImpactPage() {
   return (
     <>
       {/* ── PAGE HERO ─────────────────────────────── */}
-      <section className="bg-dark-navy relative overflow-hidden pt-[68px]">
+      <section className="bg-deep-blue relative overflow-hidden pt-[68px]">
         <div className="absolute inset-0 bg-hero-mesh" />
         <div className="absolute inset-0 bg-section-diagonal" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-5 lg:px-8 py-20 md:py-28">
           <div className="max-w-2xl animate-fade-up">
-            <div className="inline-flex items-center gap-2.5 bg-sky-blue/10 border border-sky-blue/25 rounded-full px-4 py-1.5 mb-6">
+            <div className="inline-flex items-center gap-2.5 bg-dark-navy/10 border border-dark-navy/20 rounded-full px-4 py-1.5 mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-dot" />
-              <span className="text-gold/90 text-[11px] font-600 tracking-[2px] uppercase">
+              <span className="text-dark-navy/80 text-[11px] font-600 tracking-[2px] uppercase">
                 Annual Report 2025–26
               </span>
             </div>
-            <h1 className="font-800 text-[clamp(40px,6vw,72px)] text-white leading-tight mb-5 tracking-tight">
+            <h1 className="font-800 text-[clamp(40px,6vw,72px)] text-dark-navy leading-tight mb-5 tracking-tight">
               Impact &<br />
-              <span className="text-sky-blue">Gallery</span>
+              <span className="text-white">Gallery</span>
             </h1>
-            <p className="text-white/60 text-[17px] font-300 leading-relaxed max-w-xl">
+            <p className="text-dark-navy/80 text-[20px] font-300 leading-relaxed max-w-xl">
               Measurable change in the lives of grandmothers in Kibra — and a window
               into the work, the craft, and the community we are building.
             </p>
@@ -103,10 +103,10 @@ export default function ImpactPage() {
         </div>
 
         <div className="relative z-10 border-t border-white/10">
-          <div className="max-w-6xl mx-auto px-5 lg:px-8 py-3 flex items-center gap-2 text-[12px] text-white/35">
-            <Link href="/" className="hover:text-white/60 transition-colors">Home</Link>
+          <div className="max-w-6xl mx-auto px-5 lg:px-8 py-3 flex items-center gap-2 text-[12px] text-dark-navy/40">
+            <Link href="/" className="hover:text-dark-navy/60 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-white/60">Impact</span>
+            <span className="text-dark-navy/60">Impact</span>
           </div>
         </div>
       </section>
@@ -219,7 +219,7 @@ export default function ImpactPage() {
             <h2 className="font-800 text-[clamp(28px,3.5vw,44px)] text-white mt-3 mb-4 leading-tight">
               Transforming Lives,
               <br />
-              <span className="text-gold">Beyond the Craft</span>
+              <span className="text-dark-navy">Beyond the Craft</span>
             </h2>
           </RevealWrapper>
 
@@ -302,27 +302,27 @@ export default function ImpactPage() {
       </section>
 
       {/* ── CTA ───────────────────────────────────── */}
-      <section className="bg-sky-blue relative overflow-hidden">
+      <section className="bg-deep-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal opacity-50" />
         <div className="container-tight relative z-10 py-16 text-center px-5">
           <RevealWrapper>
-            <h2 className="font-800 text-[clamp(26px,4vw,42px)] text-deep-blue mb-4 leading-tight">
+            <h2 className="font-800 text-[clamp(26px,4vw,42px)] text-dark-navy mb-4 leading-tight">
               Help Us Write the Next Chapter
             </h2>
-            <p className="text-deep-blue/70 text-[16px] leading-relaxed max-w-lg mx-auto mb-7">
+            <p className="text-dark-navy/70 text-[16px] leading-relaxed max-w-lg mx-auto mb-7">
               The data shows what is possible. Your support helps the Grannies Project
               sustain and scale these results to reach more grandmothers.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center gap-2 bg-deep-blue hover:bg-dark-navy text-white font-700 text-[14px] px-8 py-4 rounded-md transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 bg-dark-navy hover:bg-dark-navy/80 text-white font-700 text-[14px] px-8 py-4 rounded-md transition-colors shadow-lg"
               >
                 Get Involved
               </Link>
               <Link
                 href="/programme"
-                className="inline-flex items-center gap-2 bg-white/25 hover:bg-white/40 text-deep-blue font-600 text-[14px] px-8 py-4 rounded-md border border-deep-blue/15 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/25 hover:bg-white/40 text-dark-navy font-600 text-[14px] px-8 py-4 rounded-md border border-dark-navy/20 transition-colors"
               >
                 View Programme
               </Link>
