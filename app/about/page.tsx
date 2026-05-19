@@ -64,7 +64,7 @@ const TIMELINE = [
   {
     year: '1998',
     title: 'Trefoil Guild Kenya Founded',
-    body: 'A branch of the Kenya Girl Guides Association is established, uniting Guide leaders and associates aged 18 and above under the Guide Promise.',
+    body: 'A branch of the Kenya Girl Guides Association is established, uniting women aged 18 and above who wish to stay active in guiding , keep the spirit of the Guide Promise alive, and support the community.',
   },
   {
     year: 'Early 2000s',
@@ -138,13 +138,11 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-text-muted leading-relaxed mb-4">
-                Trefoil Guild Kenya is a vibrant branch of the Kenya Girl Guides Association,
-                formed in 1998. We foster lifelong commitment to the Guide Promise and Law,
+                Trefoil Guild Kenya is a vibrant branch of the Kenya Girl Guides Association (KGGA),
+                that is independently administered . We foster lifelong commitment to the Guide Promise and Law,
                 encouraging community service, mentorship, and continued engagement in Girl Guiding.
               </p>
               <p className="text-text-muted leading-relaxed mb-4">
-                Members include Guide leaders who are not running Guide Units and are either
-                pursuing studies or have changed jobs, alongside new associates aged 18 and above.
               </p>
               <p className="text-text-muted leading-relaxed mb-6">
                 The Guild works actively to support intergenerational mentorship, community
@@ -152,6 +150,32 @@ export default function AboutPage() {
                 Sustainable Development Goals. The <strong className="text-dark-navy font-600">Grannies Community Project</strong> is
                 one of the Guild&apos;s flagship community programmes.
               </p>
+              <div className="bg-sky-light rounded-xl p-5 border border-sky-blue/15 mb-6">
+  <p className="text-dark-navy font-700 text-[13px] tracking-wide uppercase mb-4">
+    Key Membership Details
+  </p>
+  <ul className="space-y-3">
+    {[
+      { label: 'Target Group', value: 'Women 18 years and older' },
+      { label: 'Purpose', value: 'To support the Girl Guide movement, community service, and foster friendship among adult members' },
+      { label: 'Activities', value: 'Active participation in community service, supporting younger guide units, and social networking' },
+      { label: 'How to Join', value: 'Prospective members can register through the KGGA website' },
+    ].map(item => (
+      <li key={item.label} className="flex items-start gap-3 text-[13.5px]">
+        <span className="text-deep-blue font-700 min-w-[100px] flex-shrink-0">{item.label}:</span>
+        <span className="text-text-muted leading-relaxed">{item.value}</span>
+      </li>
+    ))}
+  </ul>
+  <div className="mt-4 pt-4 border-t border-sky-blue/15">
+    <p className="text-text-muted text-[13px] leading-relaxed italic">
+      The Guild provides a <strong className="text-dark-navy">&ldquo;Golden Branch&rdquo;</strong> for
+      experienced members to maintain their commitment to the Girl Guide movement while
+      enjoying the fellowship of like-minded women.
+    </p>
+  </div>
+</div>
+            
               <p className="text-text-muted leading-relaxed mb-6">
                 Kenya Girl Guides is a member of the World Association of Girl Guides and Girl Scouts (WAGGGS)
                 </p> 
@@ -159,8 +183,8 @@ export default function AboutPage() {
               <div className="inline-flex items-center gap-3 bg-sky-light border border-sky-blue/20 rounded-xl px-5 py-3">
                 <span className="text-2xl">🌐</span>
                 <div>
-                  <div className="text-dark-navy font-700 text-[13px]">WAGGGS Affiliated</div>
-                  <div className="text-text-muted text-[12px]">World Association of Girl Guides and Girl Scouts</div>
+                  <div className="text-dark-navy font-700 text-[13px]">KGGA Affiliated</div>
+                  <div className="text-text-muted text-[12px]">Kenya Girl Guides Association</div>
                 </div>
               </div>
             </RevealWrapper>
@@ -185,11 +209,11 @@ export default function AboutPage() {
                   <div className="grid grid-cols-3 gap-4">
                     {[
                       { val: '1998', key: 'Year Formed' },
-                      { val: 'WAGGGS', key: 'Affiliation' },
-                      { val: 'Nairobi', key: 'Base' },
+                      { val: 'KGGA', key: 'Affiliation' },
+                      { val: 'ICA,Nairobi', key: 'Base' },
                     ].map(item => (
                       <div key={item.key}>
-                        <div className="text-gold font-800 text-[22px] leading-none">{item.val}</div>
+                        <div className="text-white font-800 text-[22px] leading-none">{item.val}</div>
                         <div className="text-dark-navy/50 text-[10px] font-600 tracking-wider uppercase mt-1">{item.key}</div>
                       </div>
                     ))}
