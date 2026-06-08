@@ -4,6 +4,7 @@ import Link from 'next/link'
 import SectionLabel from '@/components/SectionLabel'
 import StatsCounter from '@/components/StatsCounter'
 import RevealWrapper from '@/components/RevealWrapper'
+import HeroImage from '@/components/HeroImage'
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -60,25 +61,35 @@ const ACTIVITY_PREVIEWS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
-      <section className="min-h-screen bg-deep-blue relative overflow-hidden flex items-center pt-[68px]">
-        <div className="absolute inset-0 bg-hero-mesh" />
-        <div className="absolute inset-0 bg-section-diagonal opacity-100" />
-        <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-sky-blue/10 opacity-50" />
-        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-gold/10 opacity-50" />
+      <section
+  className="min-h-screen relative overflow-hidden flex items-center pt-[68px]"
+  style={{
+    backgroundImage: 'url(/Hero-image.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  }}
+  >
+  {/* Blur overlay — image stays visible through it */}
+  <div className="absolute inset-0 backdrop-blur-sm bg-black/10" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-5 lg:px-8 py-20 grid lg:grid-cols-[1fr_auto] gap-16 items-center w-full">
+
+        {/* Decorative rings */}
+        <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-sky-blue/10 opacity-50" />
+        <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-gold/20 opacity-50" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-5 lg:px-8 py-20 grid lg:grid-cols-[1fr_auto] gap-16 items-start w-full">
 
           {/* Text */}
           <div className="animate-fade-up max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 bg-dark-navy/10 border border-dark-navy/20 rounded-full px-4 py-1.5 mb-8">
+            <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-blue animate-pulse-dot" />
-              <span className="text-dark-navy/80 text-[11px] font-600 tracking-[2px] uppercase">
+              <span className="text-white/80 text-[11px] font-600 tracking-[2px] uppercase">
                 Trefoil Guild Kenya · Est. 1998
               </span>
             </div>
 
-            <h1 className="font-800 text-[clamp(48px,7vw,82px)] leading-[1.0] text-dark-navy mb-6 tracking-tight">
+            <h1 className="font-800 text-[clamp(48px,7vw,82px)] leading-[1.0] text-white mb-6 tracking-tight">
               Inspiring
               <br />
               <span className="text-gold">Generations,</span>
@@ -92,7 +103,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-dark-navy/70 text-[17px] font-300 leading-relaxed max-w-lg mb-10">
+            <p className="text-white/100 text-[20px] font-300 leading-relaxed max-w-lg mb-10">
               Empowering vulnerable grandmothers in Kibra, Nairobi — through craft
               skills, economic independence, and the unbreakable bonds of community.
             </p>
@@ -100,7 +111,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/get-involved"
-                className="inline-flex items-center gap-2 bg-dark-navy hover:bg-gold-dark text-white font-700 text-[14px] px-8 py-4 rounded-md transition-all duration-200 hover:-translate-y-px shadow-gold-glow"
+                className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-dark-navy font-700 text-[14px] px-8 py-4 rounded-md transition-all duration-200 hover:-translate-y-px shadow-gold-glow"
               >
                 Make a Difference
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
@@ -109,47 +120,39 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 bg-transparent text-dark-navy/80 hover:text-gold border border-dark-navy/25 hover:border-deep-blue/60 font-500 text-[14px] px-8 py-4 rounded-md transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-white/10 text-white hover:bg-white/20 border border-white/30 hover:border-white/50 font-500 text-[14px] px-8 py-4 rounded-md transition-all duration-200"
               >
                 Learn More
               </Link>
             </div>
           </div>
 
-          {/* Logo badge with orbiting mini-logo */}
-          <div className="hidden lg:flex flex-col items-center gap-6 animate-fade-in">
-            <div className="relative">
-              <div className="w-[220px] h-[220px] rounded-full overflow-hidden ring-4 ring-gold/30 shadow-[0_0_80px_rgba(245,166,35,0.2)]">
-                <Image
-                  src="/logo.jpeg"
-                  alt="Trefoil Guild Kenya"
-                  width={220}
-                  height={220}
-                  className="object-cover w-full h-full"
-                  priority
-                />
-              </div>
-              <div className="absolute -top-2 -right-2 w-14 h-14 rounded-full overflow-hidden ring-2 ring-gold shadow-[0_0_16px_rgba(245,166,35,0.55)]">
-                <Image
-                  src="/blank.jpg"
-                  alt="Trefoil Guild Kenya badge"
-                  width={56}
-                  height={56}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            </div>
-            <div className="text-center">
-              <p className="text-dark-navy/40 text-[11px] tracking-widest uppercase font-500">Kenya Girl Guides</p>
-              <p className="text-dark-navy/40 text-[11px] tracking-widest uppercase font-500">Association · WAGGGS</p>
-            </div>
-          </div>
+          {/* Logo badge */}
+          {/* Logo badge — small, transparent, pinned to top */}
+<div className="hidden lg:flex flex-col items-center gap-3 animate-fade-in pt-2">
+  <div className="relative">
+    <div className="w-[90px] h-[90px] rounded-full overflow-hidden ring-2 ring-gold/30 opacity-60 hover:opacity-90 transition-opacity duration-300">
+      <Image
+        src="/logo.jpeg"
+        alt="Trefoil Guild Kenya"
+        width={90}
+        height={90}
+        className="object-cover w-full h-full"
+        priority
+      />
+    </div>
+  </div>
+  <div className="text-center opacity-50">
+    <p className="text-white text-[9px] tracking-widest uppercase font-500">Kenya Girl Guides</p>
+    <p className="text-white text-[9px] tracking-widest uppercase font-500">Association · WAGGGS</p>
+  </div>
+</div>
 
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark-navy/30">
-          <div className="w-px h-10 bg-gradient-to-b from-dark-navy/30 to-transparent animate-scroll-line" />
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+          <div className="w-px h-10 bg-gradient-to-b from-white/40 to-transparent animate-scroll-line" />
           <span className="text-[10px] tracking-[2px] uppercase font-500">Scroll</span>
         </div>
       </section>
@@ -200,7 +203,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ACTIVITIES TEASER - Updated to darker cyan blue */}
+      {/* ACTIVITIES TEASER */}
       <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
@@ -217,7 +220,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/programme"
-                className="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-600 text-[13px] transition-colors"
+                className="inline-flex items-center gap-2 text-gold hover:text-gold-dark font-600 text-[15px] transition-colors"
               >
                 View Full Programme
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -233,11 +236,11 @@ export default function HomePage() {
                     href={act.href}
                     className="flex gap-5 items-start bg-white/[0.06] hover:bg-white/[0.10] border border-sky-blue/10 hover:border-sky-blue/30 rounded-xl p-6 transition-all duration-200 group"
                   >
-                    <span className="font-800 text-[34px] leading-none text-gold/70 group-hover:text-gold/50 transition-colors w-10 flex-shrink-0">
+                    <span className="font-800 gold-[34px] leading-none text-gold/70 group-hover:text-gold/50 transition-colors w-10 flex-shrink-0">
                       {act.num}
                     </span>
                     <div>
-                      <h3 className="font-700 text-[16px] text-white mb-1.5">{act.title}</h3>
+                      <h3 className="font-700 text-[16px] text-gold mb-1.5">{act.title}</h3>
                       <p className="text-dark-navy/70 text-[15px] leading-relaxed">{act.body}</p>
                     </div>
                   </Link>

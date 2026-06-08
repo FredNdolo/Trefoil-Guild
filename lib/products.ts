@@ -1,0 +1,232 @@
+export type Category = 'All' | 'Beadwork' | 'Baskets' | 'Patchwork' | 'Accessories'
+
+export interface Product {
+  id: number
+  name: string
+  category: Exclude<Category, 'All'>
+  price: number
+  originalPrice?: number
+  image: string
+  images: string[]
+  description: string
+  details: string[]
+  badge?: string
+  inStock: boolean
+  rating: number
+  reviewCount: number
+}
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 1,
+    name: 'Handcrafted Beaded Bracelet',
+    category: 'Beadwork',
+    price: 1800,
+    originalPrice: 2200,
+    image: '/beaded-bracelet.jpg',
+    images: ['/beaded-bracelet.jpg'],
+    description: 'Handcrafted beaded bracelet in vibrant color. Each piece is unique and tells the story of the grandmother who made it.',
+    details: ['Handmade in Kibra, Nairobi', 'Vibrant color beads', 'Adjustable length', 'Each piece is one-of-a-kind', 'Comes in a craft paper gift sleeve'],
+    badge: 'Bestseller',
+    inStock: true,
+    rating: 4.8,
+    reviewCount: 24,
+  },
+  {
+    id: 2,
+    name: 'Brown Beaded Necklace',
+    category: 'Beadwork',
+    price: 950,
+    image: '/brown-necklace.jpg',
+    images: ['/brown-necklace.jpg'],
+    description: 'Stacked Beaded necklace. Perfect as a gift or personal accessory. Each bracelet is individually handbeaded.',
+    details: ['Beaded necklace', 'One size', 'Mixed bead sizes', 'Gift-ready packaging'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 18,
+  },
+  {
+    id: 3,
+    name: 'Red Beaded Necklace',
+    category: 'Beadwork',
+    price: 650,
+    image: '/red-necklace.jpg',
+    images: ['/red-necklace.jpg'],
+    description: 'Stack Beaded necklace handbeaded by our grannies in Kibra. Vibrant colours that complement any outfit.',
+    details: ['Lightweight drop style', 'Mixed bead sizes', 'Red beads', 'Handbeaded by grannies'],
+    inStock: true,
+    rating: 4.7,
+    reviewCount: 31,
+  },
+  {
+    id: 4,
+    name: 'Woven Market Basket',
+    category: 'Baskets',
+    price: 2400,
+    originalPrice: 2800,
+    image: '/kyondo.jpg',
+    images: ['/kyondo.jpg'],
+    description: 'Large sisal basket woven by hand — sturdy, eco-friendly, and beautifully patterned. Perfect for shopping, storage, or as a statement home piece.',
+    details: ['100% natural sisal', 'Approx. 40cm diameter', 'Strong reinforced handles', 'Eco-friendly and durable'],
+    badge: 'New',
+    inStock: true,
+    rating: 4.9,
+    reviewCount: 12,
+  },
+  {
+    id: 5,
+    name: 'Small Woven Basket',
+    category: 'Baskets',
+    price: 1200,
+    image: '/sisal-bag.jpg',
+    images: ['/sisal-bag.jpg'],
+    description: 'Compact woven basket ideal for shopping, storage, or as a fashion piece. A beautiful and practical everyday piece.',
+    details: ['Natural sisal weave', 'Approx. 20cm diameter', 'Flat base — stable on surfaces', 'Lightweight and practical'],
+    inStock: true,
+    rating: 4.5,
+    reviewCount: 9,
+  },
+  {
+    id: 6,
+    name: 'Multicolored Bag',
+    category: 'Baskets',
+    price: 1600,
+    image: '/rasta-bag.jpg',
+    images: ['/rasta-bag.jpg'],
+    description: 'Beautifully finished bag with multiple pattern detail. Makes a memorable and meaningful gift for any occasion.',
+    details: ['Multicolored pattern weave', 'Inner pockets included', 'Approx. 30cm diameter', 'Perfect for gifting'],
+    inStock: true,
+    rating: 4.4,
+    reviewCount: 7,
+  },
+  {
+    id: 7,
+    name: 'Knit Table Mat',
+    category: 'Knitwork',
+    price: 2200,
+    originalPrice: 2600,
+    image: '/table-mat.jpg',
+    images: ['/table-mat.jpg'],
+    description: 'Hand-knitted table mat using cotton fabric. Completely one-of-a-kind.',
+    details: ['Hand-knitted', 'Beautiful stitching', 'Beautiful patterns'],
+    badge: 'Knit',
+    inStock: true,
+    rating: 4.9,
+    reviewCount: 16,
+  },
+  {
+    id: 8,
+    name: 'White Beaded Necklace',
+    category: 'Beadwork',
+    price: 1750,
+    image: '/white-necklace.jpg',
+    images: ['/white-necklace.jpg'],
+    description: 'White Beaded Necklace . Vibrant color. Neatly stacked',
+    details: ['Beaded Necklace', 'White Beads', 'Hand-knitted by Grannies'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 11,
+  },
+  {
+    id: 9,
+    name: 'Mixed Green and Blue Floor Mat',
+    category: 'Patchwork',
+    price: 1400,
+    image: '/floor-mat.jpg',
+    images: ['/floor-mat.jpg'],
+    description: '45×45cm floor mat made from lovely weaving. Adds a handcrafted, homely touch to any section of the house.',
+    details: ['45×45cm', 'Cotton fabrics', 'Different colors'],
+    inStock: true,
+    rating: 4.5,
+    reviewCount: 8,
+  },
+  {
+    id: 10,
+    name: 'Scarf Holder',
+    category: 'Accessories',
+    price: 350,
+    image: '/scarf-holder.jpg',
+    images: ['/scarf-holder.jpg'],
+    description: 'Small handbeaded scarf holder, a perfect accessory for holding your scarves, or souvenir from Nairobi.',
+    details: ['Cylinder shape', 'Handbeaded charm', 'Approx. 5cm length', 'Great as a gift'],
+    inStock: true,
+    rating: 4.7,
+    reviewCount: 42,
+  },
+  {
+    id: 11,
+    name: 'Gold Beaded Kenyan Bracelet',
+    category: 'Accessories',
+    price: 400,
+    image: '/kenya-gold.jpg',
+    images: ['/kenya-gold.jpg'],
+    description: 'Colourful beaded Kenyan bracelet.',
+    details: ['Beaded bracelet', 'Kenyan Flag', 'Vibrant colour options'],
+    badge: 'New',
+    inStock: true,
+    rating: 4.8,
+    reviewCount: 19,
+  },
+  {
+    id: 12,
+    name: 'Multicolored Kenyan Flag Bracelet',
+    category: 'Beadwork',
+    price: 400,
+    image: '/kenya-stripped.jpg',
+    images: ['/kenya-stripped.jpg'],
+    description: 'Multicolored beaded bracelet. Kenyan flag stripped, pretty, and sustainably made — a great everyday gift.',
+    details: ['Multicolored', 'Kenyan Flag', 'Gold'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+  {
+    id: 13,
+    name: 'Beaded Earrings',
+    category: 'Beadwork',
+    price: 400,
+    image: '/earrings.jpg',
+    images: ['/earrings.jpg'],
+    description: 'Multicolored beaded earrings. Pretty, and sustainably made — a great everyday gift.',
+    details: ['Multicolored', 'Earrings', 'White, Black, and Gold'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+  {
+    id: 14,
+    name: 'Shell Bracelet',
+    category: 'Beadwork',
+    price: 500,
+    image: '/shell-bracelet.jpg',
+    images: ['/shell-bracelet.jpg'],
+    description: 'White-shell bracelets. Elastic - one size fits all, pretty, and sustainably made — a great everyday gift.',
+    details: ['White Shell', 'Elastic', 'Beaded'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+  {
+    id: 15,
+    name: 'Knitted Scarf',
+    category: 'Knitwork',
+    price: 500,
+    image: '/scarf.jpg',
+    images: ['/scarf.jpg'],
+    description: 'Purple Knitted Scarf. Neck scarf, pretty.',
+    details: ['Purple Scarf', 'Knitted'],
+    inStock: true,
+    rating: 4.6,
+    reviewCount: 14,
+  },
+]
+
+export const CATEGORIES: Category[] = ['All', 'Beadwork', 'Baskets', 'Patchwork', 'Accessories']
+
+export function fmt(n: number) {
+  return `KES ${n.toLocaleString('en-KE')}`
+}
+
+export function getProduct(id: number) {
+  return PRODUCTS.find(p => p.id === id) ?? null
+}

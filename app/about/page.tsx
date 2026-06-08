@@ -106,7 +106,6 @@ export default function AboutPage() {
             </div>
             <h1 className="font-800 text-[clamp(40px,6vw,72px)] text-dark-navy leading-tight mb-5 tracking-tight">
               About <span className="text-gold">Us</span>
-              
             </h1>
             <p className="text-dark-navy/70 text-[17px] font-300 leading-relaxed max-w-lg">
               Trefoil Guild Kenya is a vibrant branch of the Kenya Girl Guides Association —
@@ -139,10 +138,8 @@ export default function AboutPage() {
               </h2>
               <p className="text-text-muted leading-relaxed mb-4">
                 Trefoil Guild Kenya is a vibrant branch of the Kenya Girl Guides Association (KGGA),
-                that is independently administered . We foster lifelong commitment to the Guide Promise and Law,
+                that is independently administered. We foster lifelong commitment to the Guide Promise and Law,
                 encouraging community service, mentorship, and continued engagement in Girl Guiding.
-              </p>
-              <p className="text-text-muted leading-relaxed mb-4">
               </p>
               <p className="text-text-muted leading-relaxed mb-6">
                 The Guild works actively to support intergenerational mentorship, community
@@ -151,34 +148,34 @@ export default function AboutPage() {
                 one of the Guild&apos;s flagship community programmes.
               </p>
               <div className="bg-sky-light rounded-xl p-5 border border-sky-blue/15 mb-6">
-  <p className="text-dark-navy font-700 text-[13px] tracking-wide uppercase mb-4">
-    Key Membership Details
-  </p>
-  <ul className="space-y-3">
-    {[
-      { label: 'Target Group', value: 'Women 18 years and older' },
-      { label: 'Purpose', value: 'To support the Girl Guide movement, community service, and foster friendship among adult members' },
-      { label: 'Activities', value: 'Active participation in community service, supporting younger guide units, and social networking' },
-      { label: 'How to Join', value: 'Prospective members can register through the KGGA website' },
-    ].map(item => (
-      <li key={item.label} className="flex items-start gap-3 text-[13.5px]">
-        <span className="text-deep-blue font-700 min-w-[100px] flex-shrink-0">{item.label}:</span>
-        <span className="text-text-muted leading-relaxed">{item.value}</span>
-      </li>
-    ))}
-  </ul>
-  <div className="mt-4 pt-4 border-t border-sky-blue/15">
-    <p className="text-text-muted text-[13px] leading-relaxed italic">
-      The Guild provides a <strong className="text-dark-navy">&ldquo;Golden Branch&rdquo;</strong> for
-      experienced members to maintain their commitment to the Girl Guide movement while
-      enjoying the fellowship of like-minded women.
-    </p>
-  </div>
-</div>
-            
+                <p className="text-dark-navy font-700 text-[13px] tracking-wide uppercase mb-4">
+                  Key Membership Details
+                </p>
+                <ul className="space-y-3">
+                  {[
+                    { label: 'Target Group', value: 'Women 18 years and older' },
+                    { label: 'Purpose', value: 'To support the Girl Guide movement, community service, and foster friendship among adult members' },
+                    { label: 'Activities', value: 'Active participation in community service, supporting younger guide units, and social networking' },
+                    { label: 'How to Join', value: 'Prospective members can register through the KGGA website' },
+                  ].map(item => (
+                    <li key={item.label} className="flex items-start gap-3 text-[13.5px]">
+                      <span className="text-deep-blue font-700 min-w-[100px] flex-shrink-0">{item.label}:</span>
+                      <span className="text-text-muted leading-relaxed">{item.value}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 pt-4 border-t border-sky-blue/15">
+                  <p className="text-text-muted text-[13px] leading-relaxed italic">
+                    The Guild provides a <strong className="text-dark-navy">&ldquo;Golden Branch&rdquo;</strong> for
+                    experienced members to maintain their commitment to the Girl Guide movement while
+                    enjoying the fellowship of like-minded women.
+                  </p>
+                </div>
+              </div>
+
               <p className="text-text-muted leading-relaxed mb-6">
                 Kenya Girl Guides is a member of the World Association of Girl Guides and Girl Scouts (WAGGGS)
-                </p> 
+              </p>
 
               <div className="inline-flex items-center gap-3 bg-sky-light border border-sky-blue/20 rounded-xl px-5 py-3">
                 <span className="text-2xl">🌐</span>
@@ -189,44 +186,41 @@ export default function AboutPage() {
               </div>
             </RevealWrapper>
 
-            {/* Visual card - Now matching Hero style */}
+            {/* Visual card — white background */}
             <RevealWrapper delay={150}>
-              <div className="bg-deep-blue rounded-2xl p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-section-diagonal opacity-100" />
-                <div className="relative z-10">
-                  <div className="text-sky-blue text-[11px] font-700 tracking-[2px] uppercase mb-3">
-                    Kenya Girl Guides Association
-                  </div>
-                  <div className="text-dark-navy font-800 text-[26px] leading-tight mb-4">
-                    The Trefoil Guild of Kenya
-                  </div>
-                  <p className="text-dark-navy/70 text-[14.5px] leading-relaxed mb-6">
-                    A community united by the Guide Promise — working to leave the world
-                    better than we found it, one grandmother, one family, one neighbourhood
-                    at a time.
-                  </p>
-                  <div className="h-px bg-gold/30 mb-6" />
-                  <div className="grid grid-cols-3 gap-4">
-                    {[
-                      { val: '1998', key: 'Year Formed' },
-                      { val: 'KGGA', key: 'Affiliation' },
-                      { val: 'ICA,Nairobi', key: 'Base' },
-                    ].map(item => (
-                      <div key={item.key}>
-                        <div className="text-white font-800 text-[22px] leading-none">{item.val}</div>
-                        <div className="text-dark-navy/50 text-[10px] font-600 tracking-wider uppercase mt-1">{item.key}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-6 rounded-xl overflow-hidden aspect-[16/9]">
-                    <Image
-                      src="/WAGGGS-logo.jpg"
-                      alt="WAGGGS Kenya"
-                      width={600}
-                      height={300}
-                      className="w-full h-full object-contain bg-sky-blue/10 p-4"
-                    />
-                  </div>
+              <div className="bg-white rounded-2xl p-8 border border-border-soft shadow-card">
+                <div className="text-sky-blue text-[11px] font-700 tracking-[2px] uppercase mb-3">
+                  Kenya Girl Guides Association
+                </div>
+                <div className="text-dark-navy font-800 text-[26px] leading-tight mb-4">
+                  The Trefoil Guild of Kenya
+                </div>
+                <p className="text-text-muted text-[14.5px] leading-relaxed mb-6">
+                  A community united by the Guide Promise — working to leave the world
+                  better than we found it, one grandmother, one family, one neighbourhood
+                  at a time.
+                </p>
+                <div className="h-px bg-border-soft mb-6" />
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {[
+                    { val: '1998', key: 'Year Formed' },
+                    { val: 'KGGA', key: 'Affiliation' },
+                    { val: 'ICA, Nairobi', key: 'Base' },
+                  ].map(item => (
+                    <div key={item.key}>
+                      <div className="text-dark-navy font-800 text-[22px] leading-none">{item.val}</div>
+                      <div className="text-text-muted text-[10px] font-600 tracking-wider uppercase mt-1">{item.key}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl overflow-hidden aspect-[16/9] bg-sky-light">
+                  <Image
+                    src="/WAGGGS-logo.jpg"
+                    alt="WAGGGS Kenya"
+                    width={600}
+                    height={300}
+                    className="w-full h-full object-contain p-4"
+                  />
                 </div>
               </div>
             </RevealWrapper>
@@ -242,7 +236,7 @@ export default function AboutPage() {
             <RevealWrapper>
               <div className="relative rounded-2xl overflow-hidden bg-white aspect-[4/3] shadow-card">
                 <Image
-                  src="/grannies-craft.jpg"
+                  src="/happy-grannies.jpg"
                   alt="Grannies working on craft"
                   fill
                   className="object-cover"
@@ -330,7 +324,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── SDG ALIGNMENT - Now matching Hero style ─────────────────────────── */}
+      {/* ── SDG ALIGNMENT ─────────────────────────── */}
       <section className="section-pad bg-sky-light relative overflow-hidden">
         <div className="absolute inset-0 bg-section-diagonal" />
         <div className="container-wide relative z-10">
@@ -362,17 +356,19 @@ export default function AboutPage() {
             <div className="grid grid-cols-3 gap-3">
               {SDGS.map((sdg, i) => (
                 <RevealWrapper key={sdg.num} delay={i * 80}>
-                  <div className="bg-white/[0.08] border border-sky-blue/20 rounded-xl p-4 text-center hover:bg-white/[0.12] hover:border-gold/30 transition-all duration-200">
-                    <div className="font-800 text-[32px] text-gold leading-none mb-1">
-                      {sdg.num}
-                    </div>
-                    <div className="text-dark-navy/70 text-[11px] font-600 tracking-wide leading-tight">
-                      {sdg.label}
-                    </div>
+                  <div className="rounded-xl overflow-hidden border border-sky-blue/20 hover:border-gold/30 hover:shadow-card transition-all duration-200 bg-white">
+                    <Image
+                      src={`/SDG${sdg.num}.JPG`}
+                      alt={`SDG ${sdg.num}: ${sdg.label}`}
+                      width={200}
+                      height={200}
+                      className="w-full h-auto object-contain"
+                    />
                   </div>
                 </RevealWrapper>
               ))}
             </div>
+
           </div>
         </div>
       </section>

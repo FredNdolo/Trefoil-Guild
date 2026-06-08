@@ -11,8 +11,10 @@ const NAV_LINKS = [
   { label: 'About',         href: '/about' },
   { label: 'Programme',     href: '/programme' },
   { label: 'Impact',        href: '/impact' },
+  { label: 'Shop',          href: '/shop' },
   { label: 'Get Involved',  href: '/get-involved' },
   { label: 'Contact',       href: '/contact' },
+  
 ]
 
 export default function Navbar() {
@@ -39,8 +41,8 @@ export default function Navbar() {
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled
-            ? 'bg-dark-navy/98 backdrop-blur-md shadow-[0_2px_20px_rgba(13,27,75,0.35)]'
-            : 'bg-dark-navy'
+            ? 'bg-black/98 backdrop-blur-md shadow-[0_2px_20px_rgba(13,27,75,0.35)]'
+            : 'bg-gold'
         )}
       >
         <div className="max-w-6xl mx-auto px-5 lg:px-8 h-[68px] flex items-center justify-between">
@@ -58,10 +60,10 @@ export default function Navbar() {
               />
             </div>
             <div className="leading-tight">
-              <div className="text-white font-bold text-[15px] tracking-tight leading-none">
+              <div className="text-black font-bold text-[15px] tracking-tight leading-none">
                 Grannies Project
               </div>
-              <div className="text-deep-blue text-[10.5px] font-medium tracking-wider uppercase">
+              <div className="text-black-[10.5px] font-medium tracking-wider uppercase">
                 Trefoil Guild Kenya
               </div>
             </div>
@@ -76,10 +78,10 @@ export default function Navbar() {
                   <Link
                     href={href}
                     className={clsx(
-                      'relative px-3 py-1.5 text-[13px] font-500 tracking-wide transition-colors duration-200 rounded',
+                      'relative px-3 py-1.5 text-[15px] font-700 tracking-wide transition-colors duration-200 rounded',
                       active
-                        ? 'text-gold'
-                        : 'text-white/75 hover:text-white'
+                        ? 'text-black'
+                        : 'text-black/75 hover:text-white'
                     )}
                   >
                     {label}

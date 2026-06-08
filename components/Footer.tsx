@@ -26,7 +26,7 @@ const FOOTER_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-navy border-t border-sky-blue/10">
+    <footer className="bg-gray-500 border-t border-gray-700">
 
       {/* Main footer content */}
       <div className="max-w-6xl mx-auto px-5 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <p className="text-white/55 text-sm leading-relaxed max-w-sm mb-5">
+          <p className="text-white/100 text-sm leading-relaxed max-w-sm mb-5">
             Empowering vulnerable grandmothers in Nairobi&apos;s Kibra through craft skills,
             economic independence, and community bonds. A programme of the Kenya Girl
             Guides Association — aligned to WAGGGS values and the UN Sustainable
@@ -76,7 +76,7 @@ export default function Footer() {
                 <li key={href}>
                   <Link
                     href={href}
-                    className="text-white/55 hover:text-white text-[13.5px] font-400 transition-colors duration-200"
+                    className="text-white/100 hover:text-white text-[13.5px] font-400 transition-colors duration-200"
                   >
                     {label}
                   </Link>
@@ -97,11 +97,11 @@ export default function Footer() {
             >
               trefoil.guildkgga@gmail.com
             </a>
-            <span className="text-white/30 text-[13px]">
+            <span className="text-white/100 text-[13px]">
               Arboretum Road, Off State House Rd, Nairobi, Kenya
             </span>
           </div>
-          <div className="text-white/25 text-[12px]">
+          <div className="text-white/100 text-[12px]">
             © {new Date().getFullYear()} Kenya Girl Guides Association
           </div>
         </div>

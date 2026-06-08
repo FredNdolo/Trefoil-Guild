@@ -63,14 +63,17 @@ const IMPACT_QUOTES = [
 ]
 
 const GALLERY_PHOTOS = [
-  { src: '/basketry.jpg', alt: 'Grannies weaving sisal baskets', caption: 'Traditional basketry' },
+  { src: '/Community-engagement.jpg', alt: 'Grannies engaging in discussions', caption: 'Community-Engagement' },
+  { src: '/class-group.jpg', alt: 'Group of grandmothers', caption: 'Community gathering' },
+  { src: '/happy-grannies.jpg', alt: 'Happy grannies', caption: 'Day well spent' },
+  { src: '/Hero-image.jpg', alt: 'Group photo', caption: 'Group Photo' },
   { src: '/community.jpg', alt: 'Group of grandmothers smiling together', caption: 'Community gathering' },
-  { src: '/kiondoo.jpg', alt: 'Maasai beadwork kiondoo bag', caption: 'Maasai beadwork' },
+  { src: '/group-work.jpg', alt: 'Group beading and knitwork', caption: 'Group work' },
   { src: '/weaving.jpg', alt: 'Grannies weaving eco-friendly baskets', caption: 'Sisal basketry' },
   { src: '/weaving-training.jpg', alt: 'Skill training session with grandmothers', caption: 'Hands-on training' },
-  { src: '/rugs.jpg', alt: 'Handmade rugs and crafts at the market', caption: 'Market day sales' },
-  { src: '/products.jpg', alt: 'Assorted finished craft products', caption: 'Finished products' },
-  { src: '/beaded-bracelets.jpg', alt: 'Colorful beaded bracelets', caption: 'Beaded jewellery' },
+  { src: '/financial-literacy.jpg', alt: 'Learning experience', caption: 'Learning experience' },
+  { src: '/kiondoo.jpg', alt: 'Assorted finished craft products', caption: 'Finished products' },
+  { src: '/market-products.jpg', alt: 'Market products', caption: 'Market products' },
   { src: '/bead-training.jpg', alt: 'Beadwork training session', caption: 'Beadwork training' },
   { src: '/earrings.jpg', alt: 'Handmade beaded earrings', caption: 'Beaded earrings' },
 ]
@@ -154,7 +157,7 @@ export default function ImpactPage() {
             <RevealWrapper delay={150}>
               <div className="relative rounded-2xl overflow-hidden bg-sky-light aspect-[4/3] shadow-card">
                 <Image
-                  src="/grannies-group.jpg"
+                  src="/grannies-sitting.jpg"
                   alt="Grannies community"
                   fill
                   className="object-cover"

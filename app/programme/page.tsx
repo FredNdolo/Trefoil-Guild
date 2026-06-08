@@ -24,7 +24,7 @@ const ACTIVITIES = [
       'Quality control reviews before market submission',
       'Introduction of new techniques each season',
     ],
-    image: '/training.jpg',
+    image: '/table-banking.jpg',
     imageAlt: 'Grannies craft training session',
   },
   {
@@ -40,7 +40,7 @@ const ACTIVITIES = [
       'Stock management to prevent production gaps',
       'Subsidised access for lowest-income participants',
     ],
-    image: '/grannies-craft.jpg',
+    image: '/material.jpg',
     imageAlt: 'Craft materials and supplies',
   },
   {
@@ -56,7 +56,7 @@ const ACTIVITIES = [
       'Guild member distribution network',
       'Online platforms for wider reach',
     ],
-    image: '/market.jpg',
+    image: '/happy-grannies.jpg',
     imageAlt: 'Grannies products at market',
   },
   {
@@ -72,7 +72,7 @@ const ACTIVITIES = [
       'Savings culture and goal-setting',
       'Budgeting for household and business needs',
     ],
-    image: '/grannies-group.jpg',
+    image: '/class-group.jpg',
     imageAlt: 'Financial education session',
   },
   {
@@ -88,7 +88,7 @@ const ACTIVITIES = [
       'Democratically managed by the group',
       'Builds credit history and financial confidence',
     ],
-    image: '/table-banking.jpg',
+    image: '/table.jpg',
     imageAlt: 'Table banking session',
     isNew: true,
   },
@@ -105,7 +105,7 @@ const ACTIVITIES = [
       'Peer mentoring between experienced and new participants',
       'Collective production sessions fostering social bonds',
     ],
-    image: '/christmas-baskets.jpg',
+    image: '/together.jpg',
     imageAlt: 'Christmas gift basket distribution',
   },
 ]

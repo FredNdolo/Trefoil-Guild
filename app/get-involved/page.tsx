@@ -267,7 +267,7 @@ export default function GetInvolvedPage() {
             <RevealWrapper>
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-white shadow-card">
                 <Image
-                  src="/grannies-craft.jpg"
+                  src="/Community-engagement.jpg"
                   alt="Grannies at work"
                   fill
                   className="object-cover"
