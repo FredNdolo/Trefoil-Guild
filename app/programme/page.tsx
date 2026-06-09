@@ -88,7 +88,7 @@ const ACTIVITIES = [
       'Democratically managed by the group',
       'Builds credit history and financial confidence',
     ],
-    image: '/table.jpg',
+    image: '/Table.jpg',
     imageAlt: 'Table banking session',
     isNew: true,
   },
