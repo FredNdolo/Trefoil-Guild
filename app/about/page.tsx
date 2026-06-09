@@ -358,7 +358,7 @@ export default function AboutPage() {
                 <RevealWrapper key={sdg.num} delay={i * 80}>
                   <div className="rounded-xl overflow-hidden border border-sky-blue/20 hover:border-gold/30 hover:shadow-card transition-all duration-200 bg-white">
                     <Image
-                      src={`/SDG${sdg.num}.JPG`}
+                      src={`/SDG${sdg.num}.jpg`}
                       alt={`SDG ${sdg.num}: ${sdg.label}`}
                       width={200}
                       height={200}
